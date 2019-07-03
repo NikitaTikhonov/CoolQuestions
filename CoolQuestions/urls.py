@@ -41,6 +41,9 @@ urlpatterns = [
     path('api/',
          include("users.api.urls")),
 
+    path('api/',
+         include("questions.api.urls")),
+
     path('api/api-auth/',
          include("rest_auth.urls")),
 
