@@ -1,23 +1,21 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Cool Questions</title>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{% static "css/libs/bootstrap.min.css" %}"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+        <link rel="stylesheet" href="{% static "css/account/layout.css" %}">
+        <title>Cool Questions</title>
+    </head>
+    <body>
+        <div class="mt-5">
+            <div class="auth-box text-center outer-area">
 
-    <style>
-        .login-form-container,
-        .registration-form-container {
-            width: 300px;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
-<div class="auth-box text-center">
-    {% block content %}
-    {% endblock %}
-</div>
-</body>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
 </html>
